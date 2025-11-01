@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIDAR Control Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div id="topSection">
+    <div id="zone1" data-zone="controls">
+        <h3>Controls</h3>
+        <button id="btnConnect">Connect Serial</button><br><br>
+        <button id="btnStart">Start Scan</button><br><br>
+        <button id="btnStop">Stop Scan</button><br><br>
+        <button id="btnToggleDrawMode">Show Lines</button><br><br>
+        <button id="toggleLogBtn" class="ui-btn">Disable Log</button><br><br>
+        <div>
+            <label for="motorSpeed">Motor Speed:</label>
+            <input type="range" id="motorSpeed" min="60" max="255" step="1">
+            <span id="speedValue">110</span>
+            <button id="btnSetSpeed">Set Speed</button>
+        </div>
+        <br>
+        <div>
+            <label for="zoomSlider">Zoom:</label>
+            <input type="range" id="zoomSlider" min="0.5" max="3" step="0.1" value="1">
+            <span id="zoomValue">1.0×</span>
+        </div><br>
+        <button id="btnFilter">Filter Noise</button>
+        <div class="control">
+            <label for="noiseFilterStrength">Filter Strength:</label>
+            <input type="range" id="noiseFilterStrength" min="0" max="100" value="50" step="1">
+            <span id="noiseFilterStrengthValue">50</span>%
+        </div>
+    </div>
+
+    <div id="zone2" data-zone="radar">
+        <canvas id="lidarCanvas"></canvas>
+    </div>
+</div>
+
+<div id="zone3" data-zone="logs">
+    <div id="console"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
