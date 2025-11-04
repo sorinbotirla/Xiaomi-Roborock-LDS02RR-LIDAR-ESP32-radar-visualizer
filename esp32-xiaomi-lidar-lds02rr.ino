@@ -56,7 +56,7 @@ void loop() {
     cmd.toUpperCase();
 
     if (cmd == "START") {
-      analogWrite(MOT_EN, 200);   // medium speed
+      analogWrite(MOT_EN, 115);   // medium speed
       delay(200);
       sendLidarStart();
       scanning = true;
@@ -81,8 +81,8 @@ void loop() {
   // --- Parse LDS02RR frames ---
   static String batchBuffer = "";
   static unsigned long lastSend = 0;
-  const unsigned long sendInterval = 20;  // send every 20 ms
-  const int maxBatchSize = 64;            // max lines before flush
+  const unsigned long sendInterval = 360;  // send every 360 ms
+  const int maxBatchSize = 2048;            // max lines before flush
 
   while (LIDAR.available()) {
     uint8_t b = LIDAR.read();
@@ -117,7 +117,7 @@ void loop() {
 
   // --- Flush batched data periodically ---
   if (batchBuffer.length() > 0 &&
-      (millis() - lastSend > sendInterval || batchBuffer.length() > 1024)) {
+      (millis() - lastSend > sendInterval || batchBuffer.length() > maxBatchSize)) {
     Serial.print(batchBuffer);
     batchBuffer = "";
     lastSend = millis();
