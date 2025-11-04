@@ -1,5 +1,15 @@
 # Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer
 View realtime radar scan of the Xiaomi Roborock Vacuum LDS02RR LIDAR directly in a web page, without any libraries
+<table>
+  <tr>
+    <td witdh="50%">
+      <img src="https://raw.githubusercontent.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/refs/heads/main/images/4882382751.jpg" width="100%" />
+    </td>
+    <td witdh="50%">
+      <img src="https://raw.githubusercontent.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/refs/heads/main/images/ui.jpg" width="100%" />
+    </td>
+  </tr>
+</table>
 <br />
 
 ### The web app demo
@@ -9,7 +19,7 @@ View realtime radar scan of the Xiaomi Roborock Vacuum LDS02RR LIDAR directly in
 <img src="https://raw.githubusercontent.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/refs/heads/main/images/4995303790.jpg" width="100%" />
 
 ### The wiring diagram
-<img src="https://raw.githubusercontent.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/refs/heads/main/images/4882373974.png" width="100%" />
+<img src="https://raw.githubusercontent.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/refs/heads/main/images/schematic.png" width="100%" />
 <img src="https://raw.githubusercontent.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/refs/heads/main/images/LDS02RR_adapter_v03_schematic.png" width="100%" />
 
 ### BOM (Parts needed)
