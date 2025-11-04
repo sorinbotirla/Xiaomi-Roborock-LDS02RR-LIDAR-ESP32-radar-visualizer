@@ -20,7 +20,6 @@ View realtime radar scan of the Xiaomi Roborock Vacuum LDS02RR LIDAR directly in
 
 ### The wiring diagram
 <img src="https://raw.githubusercontent.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/refs/heads/main/images/schematic.png" width="100%" />
-<img src="https://raw.githubusercontent.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/refs/heads/main/images/LDS02RR_adapter_v03_schematic.png" width="100%" />
 
 ### BOM (Parts needed)
 <ul>
