@@ -32,9 +32,9 @@ View realtime radar scan of the Xiaomi Roborock Vacuum LDS02RR LIDAR directly in
   <li>A small punch-hole breadboard or prototyping soldering board (for the components soldering)</li>
   <li>2x JST Connectors 4PINs (for the ESP32 and the LIDAR) (if you want to plug and unplug it fast)</li>
   <li>1x JST Connector 2PINs (for the 5V external Power Supply)</li>
-  <li>Thin wire (for soldering)</li>
-  <li>Solder Iron (well, you know..)</li>
-  <li>Solder wire (what else?)</li>
+  <li>Thin wire (to connect the components)</li>
+  <li>Solder Iron (do not overheat the components with it)</li>
+  <li>Solder wire (for soldering)</li>
 </ul>
 
 ### Setting up and running
