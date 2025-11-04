@@ -82,3 +82,6 @@ Go to Tools>Board>Boards Manager, search for esp32 and install esp32 by Espressi
 NOTE: If you're using windows<br />
 Install the [CP210X Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)<br />
 Install the [CH340X Drivers](https://github.com/justcallmekoko/ESP32Marauder/blob/master/Drivers/CH34x_Install_Windows_v3_4.EXE)<br />
+
+<br />
+Connect the ESP32, make sure it shows up in device manager (Windows) or lsusb (linux). If not, try the other USB-C port if your ESP32 board has 2 USB-C ports.
