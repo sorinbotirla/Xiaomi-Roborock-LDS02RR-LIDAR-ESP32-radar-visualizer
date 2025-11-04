@@ -23,22 +23,37 @@ View realtime radar scan of the Xiaomi Roborock Vacuum LDS02RR LIDAR directly in
 
 ### BOM (Parts needed)
 <ul>
-  <li>1x Xiaomi Roborock Vacuum LDS02RR LIDAR</li>
-  <li>1x ESP32 (I used an S3 dev board)</li>
-  <li>1x N-Mosfet IRLZ44N Transistor</li>
-  <li>1x Schottky Diode 1n5819</li>
-  <li>1x 10k Ohm Resistor</li>
-  <li>1x 220 Ohm Resistor</li>
-  <li>1x 10uF Ceramic Capacitor</li>
-  <li>A small punch-hole breadboard or prototyping soldering board</li>
-  <li>2x JST Connectors 4PINs (for the ESP32 and the LIDAR)</li>
-  <li>1x JST Connectors 2PINs (for the 5V external Power Supply)</li>
-  <li>Thin wire</li>
-  <li>Solder Iron</li>
-  <li>Solder wire</li>
+  <li>1x Xiaomi Roborock Vacuum LDS02RR LIDAR (the sensor)</li>
+  <li>1x ESP32 (I used an S3 dev board) (can be any esp32 board)</li>
+  <li>1x N-Mosfet IRLZ44N Transistor (adjusts the motor speed)</li>
+  <li>1x Schottky Diode 1n5819 (schottky preffered)</li>
+  <li>1x 10k Ohm Resistor (stops the motor when the STOP command is sent)</li>
+  <li>1x 220 Ohm Resistor (filters some noise)</li>
+  <li>1x 10uF Ceramic Capacitor (helps with the motor start)</li>
+  <li>A small punch-hole breadboard or prototyping soldering board (for the components soldering)</li>
+  <li>2x JST Connectors 4PINs (for the ESP32 and the LIDAR) (if you want to plug and unplug it fast)</li>
+  <li>1x JST Connector 2PINs (for the 5V external Power Supply)</li>
+  <li>Thin wire (for soldering)</li>
+  <li>Solder Iron (well, you know..)</li>
+  <li>Solder wire (what else?)</li>
 </ul>
 <br />
 <br />
 <br />
-Flash the ino file on your esp32, follow the diagram for wiring and set up the files on the webapp folder on your web server.
+Flash the ino file on your esp32, follow the diagram for wiring and set up the files from the webapp folder on your web server.
 Connect trough a serial port and view the scaning in real time.
+
+### The Web App
+Open the web app html file in your browser. The buttons and controlls you get are:
+<ul>
+  <li>Connect Serial (will open the connected devices popup to select your ESP32)</li>
+  <li>Start Scan (will start spinning the motor and get the scan data on the radar map)</li>
+  <li>Stop Scan (will stop spinning the motor)</li>
+  <li>Show Lines (will show lines instead of dots on the radar map)</li>
+  <li>Disable log (will stop the log adding new messages)</li>
+  <li>Motor Speed (changes the value of the motor speed, but it doesn't change the motor speed yet)</li>
+  <li>Set (changes the speed of the motor to the value set above)</li>
+  <li>Zoom (also work with the mouse wheel above the radar map)</li>
+  <li>Filter Noise (cleans up the radar map)</li>
+  <li>Filter Strength (adjusts the noise filter strength)</li>
+</ul>
