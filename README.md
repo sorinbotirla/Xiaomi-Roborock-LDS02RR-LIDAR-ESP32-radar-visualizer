@@ -40,11 +40,11 @@ View realtime radar scan of the Xiaomi Roborock Vacuum LDS02RR LIDAR directly in
 </ul>
 
 ### Setting up and running
-Flash the ino file on your esp32, follow the diagram for wiring and set up the files from the webapp folder on your web server.
+Flash the <a href="https://github.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/blob/main/esp32-xiaomi-lidar-lds02rr.ino">esp32-xiaomi-lidar-lds02rr.ino</a> file on your esp32, follow the diagram for wiring and set up the files from the webapp folder on your web server.
 Connect trough a serial port and view the scaning in real time.
 
 ### The Web App
-Open the web app html file in your browser. The buttons and controlls you get are:
+Open the <a href="https://github.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/blob/main/webapp/index.html">web app html file</a> in your browser. The buttons and controlls you get are:
 <ul>
   <li>Connect Serial (will open the connected devices popup to select your ESP32)</li>
   <li>Start Scan (will start spinning the motor and get the scan data on the radar map)</li>
