@@ -3,9 +3,11 @@ View realtime radar scan of the Xiaomi Roborock Vacuum LDS02RR LIDAR directly in
 <table>
   <tr>
     <td witdh="50%">
+      The LDS02RR Xiaomi Roborock Lidar
       <img src="https://raw.githubusercontent.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/refs/heads/main/images/4882382751.jpg" width="100%" />
     </td>
     <td witdh="50%">
+      The Web App UI
       <img src="https://raw.githubusercontent.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/refs/heads/main/images/ui.jpg" width="100%" />
     </td>
   </tr>
