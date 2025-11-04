@@ -62,8 +62,8 @@ Open the <a href="https://github.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-
 #### The ESP32 Is not detected by the browser
 Connect an USB-C to USB-A cable (not USB-C to USB-C). Try the other USB-C connector of the ESP32. if it has 2 USB-C ports. Make sure your web app is opened from a local server or an online server, do not open the html directly in the browser.
 
-#### The LIDAR Motor hums but does not spin
-Try increasing the motor speed slider and click the speed set button.
+#### The LIDAR Motor does not spin
+Try increasing the motor speed slider and click the speed set button. Do not run Arduino IDE and the WebApp page at the same time. Close the Arduino IDE when opening the Web App.
 
 #### The LIDAR Motor spins but it doesn't show any data on the radar
 Make sure you connected the TX wire. In the <a href="https://github.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/blob/main/esp32-xiaomi-lidar-lds02rr.ino">esp32-xiaomi-lidar-lds02rr.ino</a> file, Set the LIDAR baudrate to 230400 and flash it to the esp32. If packets are shown, your LIDAR model uses 230400 baud rate instead of 115200. 
