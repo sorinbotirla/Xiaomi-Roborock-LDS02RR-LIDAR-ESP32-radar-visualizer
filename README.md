@@ -90,16 +90,3 @@ With any text editor, open platform.txt file which is located on:<br />
 > Linux or Mac: /home/USERNAME/.arduino15/packages/esp32/hardware/esp32/2.0.10/platform.txt<br />
 
 (replace USERNAME with your username)<br />
-
-In the platform.txt file:<br />
-
-Add **-w** to the following compiler settings<br />
->     build.extra_flags.esp32
->     build.extra_flags.esp32s2
->     build.extra_flags.esp32s3
->     build.extra_flags.esp32c3
-Add **-zmuldefs** to the following compiler settings<br />
->     compiler.c.elf.libs.esp32
->     compiler.c.elf.libs.esp32s2
->     compiler.c.elf.libs.esp32s3
->     compiler.c.elf.libs.esp32c3
