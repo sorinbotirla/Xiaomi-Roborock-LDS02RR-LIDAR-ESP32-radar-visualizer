@@ -66,7 +66,7 @@ Connect an USB-C to USB-A cable (not USB-C to USB-C). Try the other USB-C connec
 Try increasing the motor speed slider and click the speed set button.
 
 #### The LIDAR Motor spins but it doesn't show any data on the radar
-Make sure you connected the TX wire. If you want to debug the packets, disconnect the ESP32 then connect a Serial TTL Interface (CP2101 or CH340) to GND/5V/TX pins of your LIDAR (LIDAR TX to interface RX). Open Putty or Arduino IDE Console Terminal. Set the baudrate to 115200. If packets are shown, you're good to go. If no packets are show, set the baudrate to 230400. If packets are shown, you will need to change the LIDAR baud rate from the esp32 code to 230400 and flash your esp32 again (some newer or older models use 115200 while the other use 230400 baud rates). 
+Make sure you connected the TX wire. In the <a href="https://github.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/blob/main/esp32-xiaomi-lidar-lds02rr.ino">esp32-xiaomi-lidar-lds02rr.ino</a> file, Set the LIDAR baudrate to 230400 and flash it to the esp32. If packets are shown, your LIDAR model uses 230400 baud rate instead of 115200. 
 
 #### The ESP32 is not detected in Arduino IDE.
 Make sure you configured Arduino IDE for ESP32. If not,
