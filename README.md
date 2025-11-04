@@ -77,7 +77,7 @@ Add the following URLs to Additional Boards Manager URLs:<br />
 > https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json
 
 ##### 2. Install ESP32 support for Arduino IDE
-Go to Tools>Board>Boards Manager, search for esp32 and install esp32 by Espressif Systems<br />
+Go to Tools>Board>Boards Manager, search for esp32 and install esp32 by Espressif Systems (<strong>VERSION 2.0.10</strong><br />
 
 NOTE: If you're using windows<br />
 Install the [CP210X Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)<br />
