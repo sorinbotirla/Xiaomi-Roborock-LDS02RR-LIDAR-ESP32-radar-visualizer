@@ -82,11 +82,3 @@ Go to Tools>Board>Boards Manager, search for esp32 and install esp32 by Espressi
 NOTE: If you're using windows<br />
 Install the [CP210X Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)<br />
 Install the [CH340X Drivers](https://github.com/justcallmekoko/ESP32Marauder/blob/master/Drivers/CH34x_Install_Windows_v3_4.EXE)<br />
-
-
-##### 3. (optional) Edit platforms.txt
-With any text editor, open platform.txt file which is located on:<br />
-> Windows: C:\Users\USERNAME\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.10\platform.txt<br />
-> Linux or Mac: /home/USERNAME/.arduino15/packages/esp32/hardware/esp32/2.0.10/platform.txt<br />
-
-(replace USERNAME with your username)<br />
