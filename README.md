@@ -84,4 +84,4 @@ Install the [CP210X Drivers](https://www.silabs.com/developers/usb-to-uart-bridg
 Install the [CH340X Drivers](https://github.com/justcallmekoko/ESP32Marauder/blob/master/Drivers/CH34x_Install_Windows_v3_4.EXE)<br />
 
 <br />
-Connect the ESP32, make sure it shows up in device manager (Windows) or lsusb (linux). If not, try the other USB-C port if your ESP32 board has 2 USB-C ports.
+Connect the ESP32, make sure it shows up in device manager (Windows) or lsusb (linux). If not, try the other USB-C port if your ESP32 board has 2 USB-C ports. Do not use an USB-C to USB-C cable. Always use USB-C to USB-A, or USB-C to USB-C with USB-C to USB-A adapter.
