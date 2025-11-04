@@ -8,6 +8,7 @@ var LIDAR = function() {
     _self.gridCanvas = null;
     _self.gridCtx = null;
     _self.consoleLines = [];
+    _self.baudRate = 115200;
     _self.port = null;
     _self.reader = null;
     _self.writer = null;
@@ -94,6 +95,9 @@ var LIDAR = function() {
         _self.ctx.drawImage(_self.gridCanvas, 0, 0);
         var angle = 0;
 
+        if ("undefined" != typeof _self.repeaters.scan) {
+            clearInterval(_self.repeaters.scan);
+        }
         _self.repeaters.scan = setInterval(function() {
             var dist = 1000 + 3000 * Math.abs(Math.sin(angle * Math.PI / 180));
             _self.drawPoint(angle, dist);
@@ -101,7 +105,7 @@ var LIDAR = function() {
             if (angle >= 360) {
                 angle = 0;
             }
-        }, 20);
+        }, 360);
     };
 
     _self.stopScan = function() {
@@ -130,7 +134,7 @@ var LIDAR = function() {
     _self.connectSerial = async function() {
         try {
             _self.port = await navigator.serial.requestPort();
-            await _self.port.open({ baudRate: 115200 });
+            await _self.port.open({ baudRate: _self.baudRate });
             _self.log("Serial port connected.");
             _self.keepReading = true;
             _self.readSerialLoop();
@@ -193,6 +197,23 @@ var LIDAR = function() {
     };
 
     _self.handleSerialData = function(text) {
+        /* packet structure
+        angle, distance
+        248.0,2699
+        249.0,2813
+        250.0,2936
+        251.0,3070
+        252.0,3228
+        253.0,3372
+        254.0,3236
+        255.0,3230
+        256.0,3337
+        271.0,5417
+        272.0,5380
+        273.0,5486
+        274.0,5492
+
+         */
         var lines = text.split(/\r?\n/),
             newPoints = [],
             i,
@@ -553,6 +574,25 @@ var LIDAR = function() {
             _self.log("# Filter strength set to " + val);
             _self.renderPoints();
         });
+
+        _self.canvas.addEventListener("wheel", function(e) {
+            e.preventDefault();
+            var zoomSlider = $("#zoomSlider"),
+                min = parseFloat(zoomSlider.attr("min") || 0.1),
+                max = parseFloat(zoomSlider.attr("max") || 5),
+                step = parseFloat(zoomSlider.attr("step") || 0.1),
+                delta = e.deltaY < 0 ? step : -step,
+                newZoom = _self.zoom + delta;
+
+            if (newZoom < min) {
+                newZoom = min;
+            } else if (newZoom > max) {
+                newZoom = max;
+            }
+
+            _self.zoom = parseFloat(newZoom.toFixed(2));
+            zoomSlider.val(_self.zoom).trigger("input");
+        }, { passive: false });
     };
 
     _self.init = function() {
