@@ -38,8 +38,8 @@ View realtime radar scan of the Xiaomi Roborock Vacuum LDS02RR LIDAR directly in
   <li>Solder wire (what else?)</li>
 </ul>
 <br />
-<br />
-<br />
+
+### Setting up and running
 Flash the ino file on your esp32, follow the diagram for wiring and set up the files from the webapp folder on your web server.
 Connect trough a serial port and view the scaning in real time.
 
