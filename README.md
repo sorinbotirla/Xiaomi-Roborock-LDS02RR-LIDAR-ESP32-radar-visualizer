@@ -44,7 +44,7 @@ Flash the <a href="https://github.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR
 Connect trough a serial port and view the scaning in real time.
 
 ### The Web App
-Open the <a href="https://github.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/blob/main/webapp/index.html">web app pagee</a> in your browser (not directly, but served by a webserver - local or online). The buttons and controlls you get are:
+Open the <a href="https://github.com/sorinbotirla/Xiaomi-Roborock-LDS02RR-LIDAR-ESP32-radar-visualizer/blob/main/webapp/index.html">web app page</a> in your browser (not directly, but served by a webserver - local or online). The buttons and controlls you get are:
 <ul>
   <li>Connect Serial (will open the connected devices popup to select your ESP32)</li>
   <li>Start Scan (will start spinning the motor and get the scan data on the radar map)</li>
